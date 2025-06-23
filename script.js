@@ -103,15 +103,14 @@ function allApi(product, index) {
 */
 
 
-
+console.log(product.images)
 
   const Div = document.createElement("div");
   Div.className = "product";
 
   const img = document.createElement("img");
-  img.src = (product.images && product.images.length > 0 && product.images[0].startsWith("http"))
-    ? product.images[0]
-    : `https://picsum.photos/seed/product${index}/300/300`;
+  img.src = product.images[0]
+    console.log(img)
 
   const h3 = document.createElement("h3");
   h3.textContent = product.title;
