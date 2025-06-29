@@ -25,7 +25,12 @@ function getApi2(){
 
       const span = document.createElement("span");
       span.className = "icon";
-      span.innerHTML = "🧭";
+
+      const moreIcons = ["👕", "🕹️", "🪑", "👟",  "📦", "📱"]; 
+
+  const Icons = moreIcons[index % moreIcons.length];
+
+  span.innerHTML = Icons;
 
       const h3 = document.createElement("h3");
       h3.textContent = category.name;
@@ -103,14 +108,14 @@ function allApi(product, index) {
 */
 
 
-console.log(product.images)
+// console.log(product.images)
 
   const Div = document.createElement("div");
   Div.className = "product";
 
   const img = document.createElement("img");
   img.src = product.images[0]
-    console.log(img)
+    // console.log(img)
 
   const h3 = document.createElement("h3");
   h3.textContent = product.title;
@@ -130,11 +135,24 @@ spanstar.innerHTML = "&#9733;";
 
   const spanRating= document.createElement("span");
   spanRating.className = "rating-value"
-  spanRating.textContent = "4.9"
+  // spanRating.textContent = "4.9"
+
+    const rate = ["6.8", "5.1", "6.5", "9.2", "7.1", "3.5", "2.4" , "9.9"];
+
+    const Rating  = rate[index % rate.length];
+
+     spanRating.innerHTML = Rating;
 
   const spanreview = document.createElement("span");
   spanreview.className = "review-count";
-  spanreview.textContent = " (89 reviews) "
+  // spanreview.textContent = " (89 reviews) "
+
+ const review1 = ["(49 reviews)", "(55 reviews)", "(88 reviews)", "(78 reviews)", "(83 reviews)", " (67 reviews)", "(59 reviews)" , " (98 reviews)"];
+
+ const reviewed = review1[index %review1.length]
+  
+ spanreview.textContent = reviewed;
+
 
   ratingContainer.append(spanstar)
   ratingContainer.append(spanRating)
