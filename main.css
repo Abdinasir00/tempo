@@ -262,11 +262,6 @@ p {
   font-size: 14px;
 }
 
-@media (max-width: 768px){
-  .product{
-    visibility: hidden;
-  }
-}
 
 
 /* Default: Desktop Styles (Large Screens) */
